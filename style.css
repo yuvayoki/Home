@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+}
+.slidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background:	 #ff228c; 
+    transition: all .5s ease-in-out;
+}
+.slidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: rgb(243, 26, 91);
+    user-select: none;
+}
+.slidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height:65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.slidebar ul a li{
+    margin-right: 16px;
+}
+#check{
+    display: none;
+    
+}
+label #btn,label #cancel{
+   position: absolute;
+   cursor: pointer;
+   border-radius: 3px;
+  
+}
+label #btn{
+    left: 40px;
+    top: 20px;
+    font-size: 30px;
+    color:white;
+    padding: 6px 12px;
+    transition: all .5s;
+    z-index: 111;
+   
+}
+label #cancel{
+    z-index: 11111;
+    left: -200px;
+    top: 25px;
+    font-size: 20px;
+    background-color: red;
+    color:white;
+    transition: all .5s ease-in-out;
+}
+#check:checked ~ .slidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+#check:checked ~ section{
+    margin-left: 250px;
+}
+/*section{
+    background: url(bulb2.jpg)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    transition: all .5s ;
+}*/
+/*/////////////////////////////////////////////////////////*/
+nav .logo{
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-left: 110px;
+}
+nav img{
+    margin-left: 150px;
+    margin-top: 30px;
+}
+nav{
+  margin-top: -750px;
+  position: relative;
+  height: 80px;
+  background-color: black;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+  transition: all .4s;
+}
+#check:checked ~ nav{
+    margin-left: 250px;
+}
+nav ul{
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+ 
+  transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color: #23dbdb;
+}
+nav ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid #23dbdb;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li{
+  width: 150px;
+  display: list-item;
+  position: relative;
+  border: 1px solid #042331;
+  border-top: none;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+nav ul ul li a i{
+  margin-left: 45px;
+}
+section{
+
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+/*///////////////////////////////*/
+ h2{
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    letter-spacing:5px;
+    color: #afa0a0;
+    top: 250px;
+    font-size: 60px;
+    font-family: cursive;
+    text-transform:uppercase ;
+    width: 100%;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,#0004) ;
+     line-height: 0.70em;
+     outline: none;
+     animation: animate 5s linear infinite;
+}
+@keyframes animate{
+        0%,18%,20%,50.1%,60.1%,65.1%,80%,90.1%,92%
+        {
+        color: #afa0a0;
+         text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow:0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+
+    }
+}
+/*///////////////////////////////*/
+.video{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin-top: -210px;
+    transition: all .5s;
+}
+#check:checked ~ video{
+    margin-left: 200px;
+}
